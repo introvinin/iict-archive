@@ -1,0 +1,392 @@
+
+/* General settings: a warm paper background */
+:root {
+  --cream: #F4F0E6;
+  --paper: #FBF8F0;
+
+  --lavender: #D5D1E1;
+  --purple: #A5A1C8;
+  --purple-dark: #514D69;
+
+  --peach: #D2DCE5;
+  --terracotta: #987D9F;
+
+  --butter: #F0E2A9;
+  --sage: #B8C5AE;
+  --ink: #383849;
+  --muted: #817C8D;
+  --line: #D4D0D9;
+
+  --blue: #8299B5;
+  --mauve: #B48B9D;
+  --ochre: #D5B96C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  background-image: radial-gradient(
+    #C9C2C5 0.65px,
+    transparent 0.65px
+  );
+  background-size: 10px 10px;
+  color: var(--ink);
+  font-family: "Trebuchet MS", "Malgun Gothic", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  width: min(100% - 36px, 760px);
+  margin: 0 auto;
+  padding: 28px 0 20px;
+}
+
+/* Header and brand */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  color: var(--purple-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.season {
+  color: #92754F;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+/* A twilight sky full of stars */
+.hero {
+  padding: 24px 0 30px;
+}
+
+.hero-art {
+  position: relative;
+  min-height: 190px;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  background:
+    linear-gradient(
+      to bottom,
+      #A5A1C8 0%,
+      #8299B5 44%,
+      #B48B9D 76%,
+      #D5B96C 100%
+    );
+  box-shadow: 5px 5px 0 #D2CCD0;
+}
+
+.pixel-sun {
+  position: absolute;
+  top: 25px;
+  right: 18%;
+  width: 43px;
+  height: 43px;
+  background: var(--butter);
+  border: 3px solid #A58A56;
+  box-shadow: 0 0 0 5px #F0E2A933;
+}
+
+.pixel-cloud {
+  position: absolute;
+  width: 65px;
+  height: 13px;
+  background: #E9E6F0;
+  box-shadow:
+    10px -10px 0 #E9E6F0,
+    25px -10px 0 #E9E6F0,
+    35px 0 0 #E9E6F0;
+}
+
+.cloud-one {
+  top: 52px;
+  left: 12%;
+}
+
+.cloud-two {
+  top: 87px;
+  right: 17%;
+  transform: scale(0.65);
+}
+
+.pixel-flower {
+  position: absolute;
+  color: #F0E2A9;
+  font-size: 25px;
+  text-shadow: 2px 2px 0 #6F668A;
+}
+
+.flower-one {
+  bottom: 22px;
+  left: 16%;
+}
+
+.flower-two {
+  bottom: 38px;
+  left: 31%;
+  color: #E3D9F0;
+}
+
+.flower-three {
+  right: 16%;
+  bottom: 20px;
+  color: #E9D8B4;
+}
+
+.pixel-sprout {
+  position: absolute;
+  right: 32%;
+  bottom: 17px;
+  color: #536F68;
+  font-size: 35px;
+}
+
+.hero-caption {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  color: #383849;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+}
+
+.intro {
+  padding: 30px 4px 0;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #92718F;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  margin: 0;
+  color: var(--purple-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 8vw, 4.2rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1.15;
+}
+
+.description {
+  max-width: 480px;
+  margin: 14px 0 0;
+  color: #716C7C;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Project collection */
+.collection {
+  padding-top: 22px;
+  border-top: 1px dashed var(--line);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 17px;
+}
+
+.section-icon {
+  color: #A58A56;
+  font-size: 1.25rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--purple-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.section-note {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.project-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-width: 0;
+  padding: 20px;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 #D2CCD0;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.lavender {
+  background: #D5D1E1;
+}
+
+.peach {
+  background: #D2DCE5;
+}
+
+.project-card:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #D2CCD0;
+}
+
+.project-card:focus-visible {
+  outline: 3px dashed #92718F;
+  outline-offset: 5px;
+}
+
+.project-icon {
+  display: grid;
+  flex: 0 0 55px;
+  width: 55px;
+  height: 55px;
+  place-items: center;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  background: var(--paper);
+  color: #7775A5;
+  font-size: 1.8rem;
+}
+
+.peach .project-icon {
+  color: #987D9F;
+}
+
+.project-info {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.project-number {
+  color: #777187;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.project-title {
+  color: var(--purple-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.project-description {
+  color: #666576;
+  font-size: 0.82rem;
+}
+
+.project-arrow {
+  align-self: center;
+  color: #92754F;
+  font-size: 1.35rem;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  padding: 34px 0 10px;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.footer-flower {
+  color: #92718F;
+  font-style: normal;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 480px) {
+  .page {
+    width: min(100% - 26px, 760px);
+    padding-top: 18px;
+  }
+
+  .hero-art {
+    min-height: 155px;
+  }
+
+  .project-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .project-icon {
+    flex-basis: 45px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+  }
+
+  .project-description {
+    font-size: 0.75rem;
+  }
+
+  .hero-caption {
+    font-size: 0.57rem;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .project-card {
+    transition: none;
+  }
+}

@@ -1,31 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- TODO 1: 브라우저 탭에 보일 제목 -->
-  <title> Ng's p5.js </title>
+  <title>Saturn's Field Notes | p5.js Archive</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="./">♄ SATURN'S FIELD NOTES</a>
+      <span class="season">VOL. 01 · 2026</span>
+    </header>
 
-  <!-- TODO 2: 이름 -->
-  <h1>Ng Ng</h1>
+    <section class="hero">
+      <div class="hero-art" aria-hidden="true">
+        <span class="pixel-sun"></span>
+        <span class="pixel-cloud cloud-one"></span>
+        <span class="pixel-cloud cloud-two"></span>
+        <span class="pixel-flower flower-one">✦</span>
+        <span class="pixel-flower flower-two">☽</span>
+        <span class="pixel-flower flower-three">✧</span>
+        <span class="pixel-sprout">♄</span>
+        <span class="hero-caption">A small universe under observation</span>
+      </div>
 
-  <!-- TODO 3: 한 줄 소개 -->
-  <p>2026-2 IICT p5.js collection</p>
+      <div class="intro">
+        <p class="eyebrow">✧ SOMEWHERE BETWEEN HEAVEN & PLUTO GATE ✧</p>
+        <h1>A Map of Becoming</h1>
+        <p class="description">
+          Notes from a Hermit — creative code, quiet observations,
+          and fragments of a universe still unfolding. IICT 2026-2.
+        </p>
+      </div>
+    </section>
 
-  <!-- 과제 목록: href 는 과제 폴더 이름과 똑같이 (대소문자까지) -->
-  <ul>
-    <!-- TODO 4: 과제 1 제목 -->
-    <li><a href="assignment1/">Assignment 1 - Photo</a></li>
+    <section class="collection">
+      <div class="section-heading">
+        <span class="section-icon">✳</span>
+        <h2>Field Notes</h2>
+        <span class="section-note">02 experiments</span>
+      </div>
 
-    <!-- TODO 5: 과제 2 제목 -->
-    <li><a href="assignment2/">Assignment 2 - Random</a></li>
+      <ul class="project-list">
+        <li>
+          <a class="project-card lavender" href="assignment1/">
+            <span class="project-icon" aria-hidden="true">▧</span>
+            <span class="project-info">
+              <span class="project-number">STUDY 01 · OBSERVATION</span>
+              <span class="project-title">Photo</span>
+              <span class="project-description">
+                A chicken clock tower, assembled from fragments of dust.
+              </span>
+            </span>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
 
-    <!-- (선택) 과제 3을 추가할 때: 아래 줄의 주석을 풀고, assignment3 폴더를 넣는다
-    <li><a href="assignment3/">Assignment 3 - Button</a></li>
-    -->
-  </ul>
+        <li>
+          <a class="project-card peach" href="assignment2/">
+            <span class="project-icon" aria-hidden="true">☽</span>
+            <span class="project-info">
+              <span class="project-number">STUDY 02 · TRANSFORMATION</span>
+              <span class="project-title">Random</span>
+              <span class="project-description">
+                A broken heart. Still beating.
+              </span>
+            </span>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
+    <footer class="footer">
+      <span>The gift is yours.</span>
+      <span class="footer-flower">✧</span>
+    </footer>
+  </main>
 </body>
 </html>
